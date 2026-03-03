@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: .
+    image: app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: bookstore_db
+      DB_USER: postgres
+      DB_PASSWORD: psql_password
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: bookstore_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: psql_password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
