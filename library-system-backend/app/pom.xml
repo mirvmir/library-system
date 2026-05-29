@@ -1,7 +1,7 @@
 <project>
     <parent>
-        <groupId>com.myapp.http.library</groupId>
-        <artifactId>library-system-backend</artifactId>
+        <groupId>com.senla.http.course.library</groupId>
+        <artifactId>library-system</artifactId>
         <version>0.1.0</version>
     </parent>
 

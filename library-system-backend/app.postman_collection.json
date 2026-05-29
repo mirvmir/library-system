@@ -1,0 +1,3380 @@
+{
+  "info": {
+    "_postman_id": "0eb63252-27eb-447e-9541-0e0adce0e179",
+    "name": "app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52707031",
+    "_collection_link": "https://go.postman.co/collection/52707031-0eb63252-27eb-447e-9541-0e0adce0e179?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "Получить сумму заработанных средств за период времени",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTk0MTQ3MSwiaWF0IjoxNzc1OTQxMTExfQ.hfRUhY5R8GX_6Kqtb9RIaGthFXuzBP9-_e-DJfCD-eHUGLTzU6n8DJaxsQHYS5efp5eYJYg9_tqxWw14OEUgtGPjiL_KHjUkunr0zYjDkPOCeJQa0bK44olcntICTTWRC7dMZVbLq44osWjAYHeIXxAC68K6qUXAVBMOFJHz-xdKMlVVPdgeeRBxWCOhfKnM_D1KC7SgxQX6lKREHQZf6nCrWjhDYBt9qtnHt6O9kco839gF98ZA2KZq_EjM3FGHrvJ0e3lAox9JmYOUrqHhIHg2pcYQmF2rQL4aKlSA3XR1EkEg2NDvFigGTaYtnKPyM0asqns5sNPtggyns9QGIg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/earnings?from={{from}}&to={{to}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "earnings"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "{{from}}"
+                },
+                {
+                  "key": "to",
+                  "value": "{{to}}"
+                }
+              ]
+            },
+            "description": "ok"
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/earnings?from={{from}}&to={{to}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "earnings"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 07:57:33 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            },
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTk0MTAwOCwiaWF0IjoxNzc1OTQwNjQ4fQ.fmtp5mTSypdwKqeXyYntqWbnUIgyUhHlOlVp6lOuDnyrWu0qHShwNzH7r4K0xSl3v8Mkn4J0eY3jh_CsqeCbdbr-uT4Gj7bDIsS7jUzSXZtjbRWiFFdjB-kIxr--ruqMJL7JfiaBLouHGFeQ4ryXdt-LS944Ptrl7ztzc8oAngLVM_E-DzD4o3d7UBtkGTJlKbvDD1KkZeDhK2DbaN3rIeDQDk_7kspPZSfyxhqBX8SnM2qN1XVW5pePjwHoff6RBNMi65V50wNFlxEsV_1aWyBRdvQBVVF9fj4rtnEF9KyIZSD6Kgz3AH4Ee2KFF9-tRW58z0gSGZHF4ZnioGHRSA",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/earnings?from={{from}}&to={{to}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "earnings"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "36"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 20:58:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Invalid or expired token\"\n}"
+            },
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTk0MTQ3MSwiaWF0IjoxNzc1OTQxMTExfQ.hfRUhY5R8GX_6Kqtb9RIaGthFXuzBP9-_e-DJfCD-eHUGLTzU6n8DJaxsQHYS5efp5eYJYg9_tqxWw14OEUgtGPjiL_KHjUkunr0zYjDkPOCeJQa0bK44olcntICTTWRC7dMZVbLq44osWjAYHeIXxAC68K6qUXAVBMOFJHz-xdKMlVVPdgeeRBxWCOhfKnM_D1KC7SgxQX6lKREHQZf6nCrWjhDYBt9qtnHt6O9kco839gF98ZA2KZq_EjM3FGHrvJ0e3lAox9JmYOUrqHhIHg2pcYQmF2rQL4aKlSA3XR1EkEg2NDvFigGTaYtnKPyM0asqns5sNPtggyns9QGIg",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/earnings?from={{from}}&to={{to}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "earnings"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 20:58:55 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"totalEarnings\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "Получить количество выполненных заказов за период времени",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTk0MTYwNywiaWF0IjoxNzc1OTQxMjQ3fQ.GugcqljrIFNVHcVRGHnsT8ubg0sNSVyEPDVDv4nmcr1YCTo8-BdLIrHgvLm5vyX0DkKbvdpgtJ2lB1ES-5lIXOjv_xoEKmut4SH4QcqGOI9_Mo6aoJ8qrPA4vZL8dUAk1yuv9T4sxUR7L6-zzMtzzEoB9v_OjZmZji6jBT8nGVbBKjoAJwfAXjYV_6Brix5RaBWh8Flu1xnx6OVJh_maKe7umL5aW6RpuwDVr7INGFtjVQACh8FwmgCNRH1l3HEuKOUfjH9PdF117tjKAmbvCDZHJfNPxjl2kPr1NqZyyqKloCvf7rcxxx9WcF7EM4jutRzZixEZSrh7p-U5C0dThw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/orders/completed/count?from={{from}}&to={{to}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "orders",
+                "completed",
+                "count"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "{{from}}"
+                },
+                {
+                  "key": "to",
+                  "value": "{{to}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/orders/completed/count?from={{from}}&to={{to}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "orders",
+                    "completed",
+                    "count"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 07:58:22 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            },
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTk0MTYwNywiaWF0IjoxNzc1OTQxMjQ3fQ.GugcqljrIFNVHcVRGHnsT8ubg0sNSVyEPDVDv4nmcr1YCTo8-BdLIrHgvLm5vyX0DkKbvdpgtJ2lB1ES-5lIXOjv_xoEKmut4SH4QcqGOI9_Mo6aoJ8qrPA4vZL8dUAk1yuv9T4sxUR7L6-zzMtzzEoB9v_OjZmZji6jBT8nGVbBKjoAJwfAXjYV_6Brix5RaBWh8Flu1xnx6OVJh_maKe7umL5aW6RpuwDVr7INGFtjVQACh8FwmgCNRH1l3HEuKOUfjH9PdF117tjKAmbvCDZHJfNPxjl2kPr1NqZyyqKloCvf7rcxxx9WcF7EM4jutRzZixEZSrh7p-U5C0dThw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/orders/completed/count?from={{from}}&to={{to}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "orders",
+                    "completed",
+                    "count"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:01:04 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"count\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "Назначить пользователя администратором",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNjU5LCJpYXQiOjE3NzU5NDIyOTl9.FS9ByZmlCVwziVUpfIs8vwjaj6MtAI6EOdDWGODATfhRDBkP_5ATpqovJBM3ckQV0J-cJUwrucwzjt9bxJR1FOqQz9LNihoPore7A_dTmnv5bs8ilQdQFd7WfoUdKznn2V9DYcucz_kIHQN1BfIfwHiOUT8UE-YH4z9wFOnStFmDSx0fujxGowqUjVJzdit0jmFMZVuDxNB19BfnZHm2Z6MO8dRETdaqINNw-C_DXJ_ntx6dohszZCNUNUGaFewQWqTIcS3rhDm6hhDVUW4yM8Cf8ZX33OQkkuTpaHDa6b3V0IuyJa-Yb8f8Bdql8IXWVx7WHsMIArENcVSYXccpTA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/assign-admin/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "assign-admin",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/assign-admin/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "assign-admin",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 07:58:54 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            },
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTk0MTYwNywiaWF0IjoxNzc1OTQxMjQ3fQ.GugcqljrIFNVHcVRGHnsT8ubg0sNSVyEPDVDv4nmcr1YCTo8-BdLIrHgvLm5vyX0DkKbvdpgtJ2lB1ES-5lIXOjv_xoEKmut4SH4QcqGOI9_Mo6aoJ8qrPA4vZL8dUAk1yuv9T4sxUR7L6-zzMtzzEoB9v_OjZmZji6jBT8nGVbBKjoAJwfAXjYV_6Brix5RaBWh8Flu1xnx6OVJh_maKe7umL5aW6RpuwDVr7INGFtjVQACh8FwmgCNRH1l3HEuKOUfjH9PdF117tjKAmbvCDZHJfNPxjl2kPr1NqZyyqKloCvf7rcxxx9WcF7EM4jutRzZixEZSrh7p-U5C0dThw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/assign-admin/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "assign-admin",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:03:40 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Forbidden",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNjU5LCJpYXQiOjE3NzU5NDIyOTl9.FS9ByZmlCVwziVUpfIs8vwjaj6MtAI6EOdDWGODATfhRDBkP_5ATpqovJBM3ckQV0J-cJUwrucwzjt9bxJR1FOqQz9LNihoPore7A_dTmnv5bs8ilQdQFd7WfoUdKznn2V9DYcucz_kIHQN1BfIfwHiOUT8UE-YH4z9wFOnStFmDSx0fujxGowqUjVJzdit0jmFMZVuDxNB19BfnZHm2Z6MO8dRETdaqINNw-C_DXJ_ntx6dohszZCNUNUGaFewQWqTIcS3rhDm6hhDVUW4yM8Cf8ZX33OQkkuTpaHDa6b3V0IuyJa-Yb8f8Bdql8IXWVx7WHsMIArENcVSYXccpTA",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/admin/assign-admin/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "assign-admin",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "21"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:19:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Forbidden\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "Регистрация",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"toma@example.com\",\r\n  \"password\": \"12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"toma@example.com\",\r\n  \"password\": \"12345\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "refresh_token=280c1e55-a2e5-4d66-94f2-d81e239bed1e; Path=/; Secure; HttpOnly; SameSite=Strict"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:12:20 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"accessToken\": \"eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1ODA4OTE5LCJpYXQiOjE3NzU4MDg3Mzl9.CyHH982EfZd0__9H9hhJuFfnboE9WJA37PMArQUaVHSL2BKgIiXplK77TZB1ncvdS9CN2JBlVl8h8tljjiUjkt0ku1ur53BLH-vPo86kj18LrtNLiqvzKUfJm6Ovo7MNraNKJuKpBs_N7vAHaDKCoZ7iVKEzI06nE1O2tVRT7a3v7vp_OZ5IxMWcF_ljkvQbtq3EKr3YA8Xn75UlrKJt8_fpcCyKw4Iek9xzSWFUXLzkqOpwADK8hTELg2PinAGB4OpnB_R6DCdkvcSyXyuJ965khJ50O9mm0rm2j12EJNelkMuV4w5uaAOHnv8eCJMyyfBcGXiqUXbC_KMdUT9AJA\"\n}"
+            },
+            {
+              "name": "Conflict",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"toma@example.com\",\r\n  \"password\": \"12345\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:17:32 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User with this email already exists\",\n    \"errorCode\": \"USER_ALREADY)EXIST\",\n    \"timestamp\": \"2026-04-12T00:17:32.4775706\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Авторизация",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@ya.ru\",\r\n  \"password\": \"12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"admin@ya.ru\",\r\n  \"password\": \"12345\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "refresh_token=359128cf-53c7-49c7-97cf-e34adca76fb1; Path=/; Secure; HttpOnly; SameSite=Strict"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 22:43:25 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"accessToken\": \"eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxIiwicm9sZSI6WyJST0xFX0FETUlOIl0sImV4cCI6MTc3NTg2MTE4NSwiaWF0IjoxNzc1ODYxMDA1fQ.pydxRywc2oA1AOJLGDf-90Ui2WfG705XPTepyWK-oAp7vaq3GmhLIXLtga90fSghVnghKJGqTAenU5j8TcHvHTK9He_PhPygUKCKBXqA2-F6F0FtJMm__7Z398wpR3Di5lnghWQtqD6W_v1ejo-TQh6456jGbvVijqK4xlnCEvcVnXhnKg_jUs5cATGV1057TXg8jV5Zu3wUz7r3hADK7MPzahsCyAv5EGuEClwdSSRlBQYeK4vOFcexa1PI7oRwzwpfAikagXF-f3c53u0ypsAB1Nb3jzXL7eQ4bRNV3HtbtsboGW4ZpnR5hrSYgW3SG0sC4QlQAmYtfhqBcKbwIg\"\n}"
+            },
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"admin@ya.ru\",\r\n  \"password\": \"12345\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 22:43:37 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Invalid email or password\",\n    \"errorCode\": \"BadCredentialsException\",\n    \"timestamp\": \"2026-04-11T01:43:37.0542238\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Обновить access токен",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/app/auth/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "app",
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/app/auth/refresh",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "app",
+                    "auth",
+                    "refresh"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 01 Apr 2026 13:21:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Invalid refresh token\",\n    \"errorCode\": \"Unauthorized_Exception\",\n    \"timestamp\": \"2026-04-01T16:21:23.0936119\"\n}"
+            },
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/app/auth/refresh",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "app",
+                    "auth",
+                    "refresh"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "refresh_token=ed4b8734-9a7c-45f3-a7ca-82f5c44fb82a; Path=/; Secure; HttpOnly; SameSite=Strict"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:15:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"accessToken\": \"eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1ODA5MDg5LCJpYXQiOjE3NzU4MDg5MDl9.LEDLX0FxrjJlu0ZTmSIfrOZ9xY5AR7b7Bx9HNbOR_sD_lHSOwIhO5PGdpGOjyAcUstKiVybYG3Y93I-Z-_YQ7ujnbbsKyQU8vthH6nGBkRuYwHbBr_r9b5hX8CDqNiW9mO5UJkRW2xlTG7DETQJIfNb7fXv5Fbc3-2WI6Zu1GzKb8MW2Gs8-fFZlZ_ZfX4PDvwrzd7uEDf-JV_LidF0yfgwZOhbio7ZhtaTiMH_6lILB2jIYqQzPUinDb6CB9d6-rEOihzCuN6WMrtpjJjTuZJIyKZWXY2DZBqmBUzvALlxKKKzcQ2PpmsSOb5MMJSeankNkp_S5HCuH0CupJymzqg\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "books",
+      "item": [
+        {
+          "name": "Получить список книг",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/books?type={{type}}&direction={{direction}}&field={{field}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "{{type}}"
+                },
+                {
+                  "key": "direction",
+                  "value": "{{direction}}"
+                },
+                {
+                  "key": "field",
+                  "value": "{{field}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books?type={{type}}&direction={{direction}}&field={{field}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "{{type}}"
+                    },
+                    {
+                      "key": "direction",
+                      "value": "{{direction}}"
+                    },
+                    {
+                      "key": "field",
+                      "value": "{{field}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 07:59:30 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"books\": [\n        {\n            \"isbn\": \"978-5-38-919086-3\",\n            \"title\": \"Анна Каренина\",\n            \"author\": \"Толстой Лев Николаевич\",\n            \"price\": \"341.00\",\n            \"available\": true\n        },\n        {\n            \"isbn\": \"978-5-04-122102-7\",\n            \"title\": \"Над пропостью во ржи\",\n            \"author\": \"Сэлинджер Джером Дэвид\",\n            \"price\": \"478.00\",\n            \"available\": false\n        },\n        {\n            \"isbn\": \"978-5-38-924797-0\",\n            \"title\": \"Сёгун\",\n            \"author\": \"Джеймс Клавелл\",\n            \"price\": \"480.00\",\n            \"available\": true\n        },\n        {\n            \"isbn\": \"978-5-17-175640-6\",\n            \"title\": \"Сага о Форсайтах\",\n            \"author\": \"Голсуорси Джон\",\n            \"price\": \"519.00\",\n            \"available\": true\n        },\n        {\n            \"isbn\": \"978-5-44-610772-8\",\n            \"title\": \"Чистая архитектура\",\n            \"author\": \"Роберт Мартин\",\n            \"price\": \"865.00\",\n            \"available\": false\n        },\n        {\n            \"isbn\": \"978-5-17-119245-7\",\n            \"title\": \"Сто лет одиночества\",\n            \"author\": \"Маркес Габриэль Гарсиа\",\n            \"price\": \"979.00\",\n            \"available\": true\n        }\n    ]\n}"
+            },
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books?type={{type}}&direction={{direction}}&field={{field}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "{{type}}"
+                    },
+                    {
+                      "key": "direction",
+                      "value": "{{direction}}"
+                    },
+                    {
+                      "key": "field",
+                      "value": "{{field}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 07:59:59 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Incompatible types for sorting: ORDER and PRICE.\",\n    \"errorCode\": \"INVALID_SORT_PARAMETERS\",\n    \"timestamp\": \"2026-04-10T07:59:59.522973012\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Получить описание книги по isbn",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/books/:isbn",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books",
+                ":isbn"
+              ],
+              "variable": [
+                {
+                  "key": "isbn",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books/:isbn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    ":isbn"
+                  ],
+                  "variable": [
+                    {
+                      "key": "isbn",
+                      "value": "123"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:00:24 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Book with ISBN 123 not found.\",\n    \"errorCode\": \"NOT_FOUND_BOOK\",\n    \"timestamp\": \"2026-04-10T08:00:24.034183483\"\n}"
+            },
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books/:isbn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    ":isbn"
+                  ],
+                  "variable": [
+                    {
+                      "key": "isbn",
+                      "value": "978-5-38-919086-3"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:01:05 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"isbn\": \"978-5-38-919086-3\",\n    \"title\": \"Анна Каренина\",\n    \"author\": \"Толстой Лев Николаевич\",\n    \"price\": 341,\n    \"available\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "Добавить новую книгу",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"isbn\": \"978-5-38-919086-3\",\r\n  \"title\": \"title\",\r\n  \"author\": \"author\",\r\n  \"price\": \"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/books/stock",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books",
+                "stock"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"isbn\": \"978-5-38-919086-3\",\r\n  \"title\": \"title\",\r\n  \"author\": \"author\",\r\n  \"price\": \"123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/books/stock",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    "stock"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:02:52 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Добавить книгу на склад",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/books/stock/:isbn/add",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books",
+                "stock",
+                ":isbn",
+                "add"
+              ],
+              "variable": [
+                {
+                  "key": "isbn",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books/stock/:isbn/add",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    "stock",
+                    ":isbn",
+                    "add"
+                  ],
+                  "variable": [
+                    {
+                      "key": "isbn",
+                      "value": "123"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:03:58 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Списать книгу со склада",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/books/stock/:isbn/writeoff",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books",
+                "stock",
+                ":isbn",
+                "writeoff"
+              ],
+              "variable": [
+                {
+                  "key": "isbn",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books/stock/:isbn/writeoff",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    "stock",
+                    ":isbn",
+                    "writeoff"
+                  ],
+                  "variable": [
+                    {
+                      "key": "isbn",
+                      "value": "123"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:04:24 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Эскпортировать книги",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"path\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/books/stock/export",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books",
+                "stock",
+                "export"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"path\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/books/stock/export",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    "stock",
+                    "export"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:05:33 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Импортировать книги",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/books/stock/import",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "books",
+                "stock",
+                "import"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/books/stock/import",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "books",
+                    "stock",
+                    "import"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:05:51 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "item": [
+        {
+          "name": "Получить список запросов на книги",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/requests?type={{type}}&direction={{direction}}&field={{field}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "{{type}}"
+                },
+                {
+                  "key": "direction",
+                  "value": "{{direction}}"
+                },
+                {
+                  "key": "field",
+                  "value": "{{field}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/requests?type={{type}}&direction={{direction}}&field={{field}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "requests"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "{{type}}"
+                    },
+                    {
+                      "key": "direction",
+                      "value": "{{direction}}"
+                    },
+                    {
+                      "key": "field",
+                      "value": "{{field}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:07:52 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "Получить список заказов",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders?type={{type}}&filtered={{filtered}}&from={{from}}&to={{to}}&direction={{direction}}&field={{field}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "{{type}}"
+                },
+                {
+                  "key": "filtered",
+                  "value": "{{filtered}}"
+                },
+                {
+                  "key": "from",
+                  "value": "{{from}}"
+                },
+                {
+                  "key": "to",
+                  "value": "{{to}}"
+                },
+                {
+                  "key": "direction",
+                  "value": "{{direction}}"
+                },
+                {
+                  "key": "field",
+                  "value": "{{field}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/orders?type={{type}}&filtered={{filtered}}&from={{from}}&to={{to}}&direction={{direction}}&field={{field}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "{{type}}"
+                    },
+                    {
+                      "key": "filtered",
+                      "value": "{{filtered}}"
+                    },
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    },
+                    {
+                      "key": "direction",
+                      "value": "{{direction}}"
+                    },
+                    {
+                      "key": "field",
+                      "value": "{{field}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 Apr 2026 08:10:25 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Unauthorized\"\n}"
+            },
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders?type={{type}}&filtered={{filtered}}&from={{from}}&to={{to}}&direction={{direction}}&field={{field}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "{{type}}"
+                    },
+                    {
+                      "key": "filtered",
+                      "value": "{{filtered}}"
+                    },
+                    {
+                      "key": "from",
+                      "value": "{{from}}"
+                    },
+                    {
+                      "key": "to",
+                      "value": "{{to}}"
+                    },
+                    {
+                      "key": "direction",
+                      "value": "{{direction}}"
+                    },
+                    {
+                      "key": "field",
+                      "value": "{{field}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:21:04 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"orders\": [\n        {\n            \"id\": 1,\n            \"customerId\": 1,\n            \"status\": \"NEW\",\n            \"completionDate\": null,\n            \"totalPrice\": 979,\n            \"isbns\": [\n                \"978-5-17-119245-7\"\n            ]\n        },\n        {\n            \"id\": 2,\n            \"customerId\": 1,\n            \"status\": \"NEW\",\n            \"completionDate\": null,\n            \"totalPrice\": 1345,\n            \"isbns\": [\n                \"978-5-38-924797-0\",\n                \"978-5-44-610772-8\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Получить заказ по id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:22:25 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"customerId\": 1,\n    \"status\": \"NEW\",\n    \"completionDate\": null,\n    \"createdDate\": \"2026-04-12T00:15:19.082612\",\n    \"totalPrice\": 979,\n    \"isbns\": [\n        \"978-5-17-119245-7\"\n    ]\n}"
+            },
+            {
+              "name": "Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:22:55 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Order with ID 10 not found.\",\n    \"errorCode\": \"NOT_FOUND_ORDER\",\n    \"timestamp\": \"2026-04-12T00:22:55.0271597\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Создать заказ",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listIsbn\": [\r\n    \"123\",\r\n    \"321\"\r\n  ],\r\n  \"customerId\": 12345\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отменить заказ по id",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders/:id/cancel",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                ":id",
+                "cancel"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders/:id/cancel",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id",
+                    "cancel"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:24:02 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{}"
+            },
+            {
+              "name": "Not Found",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders/:id/cancel",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id",
+                    "cancel"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:24:24 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Order with ID 10 not found.\",\n    \"errorCode\": \"NOT_FOUND_ORDER\",\n    \"timestamp\": \"2026-04-12T00:24:24.0186591\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Выполнить заказ по id",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQyNzYwLCJpYXQiOjE3NzU5NDI0MDB9.mVBf_cW22eEwYIGgbBRQacHEaKOc_RLhquxLFPLP0yENqMfsBhyBgOIjC6EQkgXrT4eNQf6UqIiXmp4EIAJoLjmUyCyTm0Dh8-yB2r4lDfnoi7mW7iLpRyRFu1V8UJ1DW2cemxyvRIG2KnxnuUj_pop2pCGwbElrVxeJN0t82dg-66vaQTinVQBf9_HPHoeV0irbwqsexMfp1AMIvpKb2nasEMoOIZftsrNWxSfVZkh6pOBLfSMOmuXmJYZql0wTdkLzzvdU1gQ9EpEwvqm70oLXMCvYvZCwyS2599U6D677dQkMoll5KDA9tIqMLATuDgz96F09bO1Xby-idE-zGw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders/:id/complete",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                ":id",
+                "complete"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1MDQ2ODI2LCJpYXQiOjE3NzUwNDY2NDZ9.sORbDaaDrOV17vro4ASw7MXx4sSpDDxN-jRj8de5z4OaNlRBOdM-odwPVYHMr75e8xpmKH6Fs209jVOgfXPc1SroWz470If4eG-UjgJUJEYFLUr6cEIQAO8_5oaI0J5ZNJKWm_pu_Xg25RFSKitU0hljE402oSDP3myDBjPIn8s6RsqSGHZ-ZTXOutUMLeoVLk5cDhfZXdmk_68q5EVyXg22bNsWpEyz1kkoEPP6uT8l8dJFkSvf5u07d-7xGLxwVTO2TJzfUrzTj3jLePE09Snwbxke_a7LG_3pZpKa9rA1CJ_6W5ha5EZw9F2cNXX8n3KDzVZ4aoR8ysK-9vQ_DQ",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/app/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "app",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 01 Apr 2026 12:37:01 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Cannot change status from COMPLETED to COMPLETED.\",\n    \"errorCode\": \"BUSINESS_ERROR\",\n    \"timestamp\": \"2026-04-01T15:37:01.5335062\"\n}"
+            },
+            {
+              "name": "Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1MDQ4MTE0LCJpYXQiOjE3NzUwNDc5MzR9.NYE9HGe30SX7UQCGU0Bt1zes79NzepWnT3-R0AJ_Q2Za8XIeewKV73lqC3ShKRymgIphEVXgc1XwzFik5d_9iscqGe2gqcRVcRF7yUAMmEPTGwWFU4u-10Ko-YHthHETsSSNMyj1_uB1qmyArKIrtEso9EpbTylc73-87hloXBV5-3tzipzzSJKHAN15MgzSS19TChER4YGMb3DBAiDdlKMw2DomeHr-kxpg8-w7JFGPLeIlHv0EOkTLTjJGXuSnZEn4orOTVM3TfwTDX8tTbJl39NRkfuvfkkNIfr3iNb7pMCPnRL_p9GBjAqWyiRXKTtrx--wGQtPWXG33PUrDEQ",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/app/orders/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "app",
+                    "orders",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "36"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 01 Apr 2026 13:03:11 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=20"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"Invalid or expired token\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Эскпортировать заказы",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQzMjU5LCJpYXQiOjE3NzU5NDI4OTl9.OZCgooj3N0jT4yd9Qlf6VxpDY_hzn_o363gwWJWovNzOLAxpamJvgkYMagqffm0zmVj7ngTcEeTf_cJzPtvRxBSC0RfyRrqlTpnWMWzUrZqqmgAixudr-al3YnS2MU5t51tMx7GFjthSkn0rygO5kxaBaPV5PpLE9KBHLHpa6BeEWkw_UXoXKElQORFppCBKQ2Ss5d6fxcyJM4W8vzHJDj6jGq3OTergv44R_VRW6Pz5m2mY759jjIkZW7kZU0q5BqjiBZYjKAv2gC7DQ7NtpBlOdNUO8HlrbbVu_6MpA9px6Qo7WJYKdiOFw2LDjLn_ai4oUF29zXN2SyaABq_d2w",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"path\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/export",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "export"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQzMjU5LCJpYXQiOjE3NzU5NDI4OTl9.OZCgooj3N0jT4yd9Qlf6VxpDY_hzn_o363gwWJWovNzOLAxpamJvgkYMagqffm0zmVj7ngTcEeTf_cJzPtvRxBSC0RfyRrqlTpnWMWzUrZqqmgAixudr-al3YnS2MU5t51tMx7GFjthSkn0rygO5kxaBaPV5PpLE9KBHLHpa6BeEWkw_UXoXKElQORFppCBKQ2Ss5d6fxcyJM4W8vzHJDj6jGq3OTergv44R_VRW6Pz5m2mY759jjIkZW7kZU0q5BqjiBZYjKAv2gC7DQ7NtpBlOdNUO8HlrbbVu_6MpA9px6Qo7WJYKdiOFw2LDjLn_ai4oUF29zXN2SyaABq_d2w",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"path\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/orders/export",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "export"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:28:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Invalid path: data/exports/orders.csv.\",\n    \"errorCode\": \"INVALID_FILE_PATH\",\n    \"timestamp\": \"2026-04-12T00:28:36.5170221\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Импортировать заказы",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQzMjU5LCJpYXQiOjE3NzU5NDI4OTl9.OZCgooj3N0jT4yd9Qlf6VxpDY_hzn_o363gwWJWovNzOLAxpamJvgkYMagqffm0zmVj7ngTcEeTf_cJzPtvRxBSC0RfyRrqlTpnWMWzUrZqqmgAixudr-al3YnS2MU5t51tMx7GFjthSkn0rygO5kxaBaPV5PpLE9KBHLHpa6BeEWkw_UXoXKElQORFppCBKQ2Ss5d6fxcyJM4W8vzHJDj6jGq3OTergv44R_VRW6Pz5m2mY759jjIkZW7kZU0q5BqjiBZYjKAv2gC7DQ7NtpBlOdNUO8HlrbbVu_6MpA9px6Qo7WJYKdiOFw2LDjLn_ai4oUF29zXN2SyaABq_d2w",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders/import",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "import"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJraWQiOiJraWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzc1OTQzMjU5LCJpYXQiOjE3NzU5NDI4OTl9.OZCgooj3N0jT4yd9Qlf6VxpDY_hzn_o363gwWJWovNzOLAxpamJvgkYMagqffm0zmVj7ngTcEeTf_cJzPtvRxBSC0RfyRrqlTpnWMWzUrZqqmgAixudr-al3YnS2MU5t51tMx7GFjthSkn0rygO5kxaBaPV5PpLE9KBHLHpa6BeEWkw_UXoXKElQORFppCBKQ2Ss5d6fxcyJM4W8vzHJDj6jGq3OTergv44R_VRW6Pz5m2mY759jjIkZW7kZU0q5BqjiBZYjKAv2gC7DQ7NtpBlOdNUO8HlrbbVu_6MpA9px6Qo7WJYKdiOFw2LDjLn_ai4oUF29zXN2SyaABq_d2w",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders/import",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "import"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Apr 2026 21:29:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Invalid path: data/imports/orders.csv.\",\n    \"errorCode\": \"INVALID_FILE_PATH\",\n    \"timestamp\": \"2026-04-12T00:29:33.0875098\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080/app"
+    }
+  ]
+}

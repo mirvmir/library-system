@@ -13,6 +13,10 @@ services:
       DB_USER: postgres
       DB_PASSWORD: psql_password
 
+    secrets:
+      - jwt_private_key
+      - jwt_public_key
+
   db:
     image: postgres:16
     environment:
@@ -24,3 +28,9 @@ services:
 
 volumes:
   db-data:
+
+secrets:
+  jwt_private_key:
+    file: ./data/secrets/private.pem
+  jwt_public_key:
+    file: ./data/secrets/public.pem

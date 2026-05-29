@@ -4,8 +4,11 @@
 CREATE SCHEMA IF NOT EXISTS bookstore_db;
 
 --changeset unikitina:2026-02-19-10:05
-CREATE TABLE IF NOT EXISTS customer (
-  customer_id     INT PRIMARY KEY
+CREATE TABLE IF NOT EXISTS users (
+  user_id           INT PRIMARY KEY,
+  email             VARCHAR(200) NOT NULL CONSTRAINT uq_users_email UNIQUE (email),
+  password_hash     VARCHAR(255) NOT NULL,
+  role              VARCHAR(50) NOT NULL
 );
 --rollback DROP TABLE customer;
 
@@ -22,10 +25,10 @@ CREATE TABLE IF NOT EXISTS book_model (
 
 --changeset unikitina:2026-02-19-10:07
 CREATE TABLE IF NOT EXISTS book_unit (
-  book_unit_id    INT PRIMARY KEY,
-  isbn            VARCHAR(50) NOT NULL REFERENCES book_model(isbn),
-  delivery_date   DATE NOT NULL,
-  available       BOOLEAN NOT NULL
+  book_unit_id      INT PRIMARY KEY,
+  isbn              VARCHAR(50) NOT NULL REFERENCES book_model(isbn),
+  delivery_date     DATE NOT NULL,
+  available         BOOLEAN NOT NULL
 );
 --rollback DROP TABLE book_unit;
 
@@ -40,7 +43,7 @@ CREATE TABLE IF NOT EXISTS book_lists (
 --changeset unikitina:2026-02-19-10:09
 CREATE TABLE IF NOT EXISTS orders (
   order_id          INT PRIMARY KEY,
-  customer_id       INT NOT NULL REFERENCES customer(customer_id),
+  user_id           INT NOT NULL REFERENCES users(user_id),
   status            VARCHAR,
   created_date      TIMESTAMP NOT NULL,
   completion_date   TIMESTAMP NULL,
@@ -53,6 +56,6 @@ CREATE TABLE IF NOT EXISTS orders (
 CREATE TABLE IF NOT EXISTS book_request (
   book_request_id   BIGSERIAL PRIMARY KEY,
   isbn              VARCHAR(50) NOT NULL REFERENCES book_model(isbn),
-  customer_id       INT NOT NULL REFERENCES customer(customer_id)
+  user_id           INT NOT NULL REFERENCES users(user_id)
 );
 --rollback DROP TABLE book_request;
