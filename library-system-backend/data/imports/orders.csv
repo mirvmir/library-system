@@ -1,0 +1,4 @@
+id,customerId,status,bookIsbn,bookId,completionDate
+3,2,NEW,978-5-4461-0960-9,null,null
+3,2,NEW,978-5-4461-0960-9,null,null
+4,1,COMPLETED,978-5-17-175640-6,4,2025-02-15T00:00:00

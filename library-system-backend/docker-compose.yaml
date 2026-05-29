@@ -1,0 +1,36 @@
+services:
+  backend:
+    build: .
+    image: app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: bookstore_db
+      DB_USER: postgres
+      DB_PASSWORD: psql_password
+
+    secrets:
+      - jwt_private_key
+      - jwt_public_key
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: bookstore_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: psql_password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+
+secrets:
+  jwt_private_key:
+    file: ./data/secrets/private.pem
+  jwt_public_key:
+    file: ./data/secrets/public.pem
